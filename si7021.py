@@ -41,6 +41,21 @@ class Si7021(object):
 		rh_code = struct.unpack(">H",data)
 		return (125*rh_code[0] / 65536 - 6)
 
+	@property
+	def heater(self):
+		self.pi.i2c_write_device(self.i2c, self.__cmds["read_reg1"])
+		_, data = self.pi.i2c_read_device(self.i2c, 1)
+		reg = struct.unpack(">B",data)
+		return bool(reg[0] & (1<<2))
+
+	@heater.setter
+	def heater(self, value):
+		self.pi.i2c_write_device(self.i2c, self.__cmds["read_reg1"])
+		_, data = self.pi.i2c_read_device(self.i2c, 1)
+		reg = struct.unpack(">B",data)
+		new_reg = reg[0] | 0x04 if value else reg[0] & 0xFB
+		self.pi.i2c_write_device(self.i2c, self.__cmds["write_reg1"] + [new_reg])
+
 	def reset(self):
 		self.pi.i2c_write_device(self.i2c, self.__cmds["reset"])
 
