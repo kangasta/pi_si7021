@@ -65,8 +65,13 @@ class Si7021(object):
 if __name__ == "__main__":
 	RHTEMP = Si7021()
 
-	if len(sys.argv) > 1 and sys.argv[1] == "reset":
+	if len(sys.argv) > 1 and sys.argv[1] == "--reset":
 		RHTEMP.reset()
+		RHTEMP.close()
+		sys.exit(0)
+	if len(sys.argv) > 1 and sys.argv[1] == "--heater":
+		heat = "ON" if RHTEMP.heater else "OFF"
+		print("Heater: " + heat)
 
 	print("Temperature: " + str(round(RHTEMP.temperature, 2)) + " \u00B0C")
 	print("Relative humidity: " + str(round(RHTEMP.relative_humidity, 2)) + " %")
