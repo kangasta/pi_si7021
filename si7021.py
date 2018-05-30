@@ -73,7 +73,7 @@ if __name__ == "__main__":
 		heat = "ON" if RHTEMP.heater else "OFF"
 		print("Heater: " + heat)
 
-	print("Temperature: " + str(round(RHTEMP.temperature, 2)) + " \u00B0C")
+	print("Temperature: " + str(round(RHTEMP.temperature, 2)) + u" \u00B0C")
 	print("Relative humidity: " + str(round(RHTEMP.relative_humidity, 2)) + " %")
 
 	RHTEMP.close()
