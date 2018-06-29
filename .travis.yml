@@ -9,14 +9,14 @@ install:
 - pip install -r requirements.txt
 - pip install -r tst_requirements.txt
 script:
-- cd rhtemp_si7021
+- cd pi_si7021
 - python -m unittest discover -s tst/
 - cd ..
 deploy:
   provider: pypi
   user: kangasta
   password:
-    secure: XyrVHTVKF98l65f7VzJ8/974IXDkzhE7Wffme5arbpnf7JlsLJRlO+qXwCVEnFxxTIL5D25ZhnQBrX8Cxk1KR1FJlsru/9EGEYSWL5BJ6TllnQqdlzghpGN1JZr7Qs1wQLVY+KRc1xjthFmBeZx9PeIhWSQrAmo+nimGJP+Ab+9XfslOTz2o7NxUqJ/Rh2HpHtZXqZ+ZxxA+yWqD+NaRQ6mXDAT5KKqo8UByoXO3ehKuLF9Bef21Dv31mbpEH9DeDoepamVKEeIis6r9aWx4B19H/u6QYGh7wfqOexx/4cPhPmPYMHB5/3TINaNWllzW06cZNRPUCOaY7oJ4zt956JWSiBWws1zPtJ+ecFU8BPnsTaceLIXCYPdd04MAme9EuTgHg9B2Qo8MI/+NwpdnWrDBChCfZIGG22mm6w+iRGi9Wtm3lznzrKz1nl/3nqHLln9CBgtv8Wd+y+BUmh+WwHsGj4SqGQZe/3cB69ArXpmKW3oRazl44Ob/N6/4VMjszYhSa2wodznkl9c21NdChYe1vkZNdPCBYBixrOjP5EnLqMdlFQt8sA31rSG16vdC3BTnQGYPL413fsVpUgnuG6lpx7hYTjl3PZrZe69a5GUPI0+tHQ7JH9BoguioLZ+3pNWXruz2YyqKrlPjxLWZi9IW+dab8/Dx0ysJcz9ql5s=
+    secure: ZH7rqYWNbkGmt/4fmR020Yg/x96NGCCs40uvjC0cJJwb10cmR9nC54rW+p4zRaGDZkySyLhG7bulTKhg4+ik6DRQyuNTe0yeEf+qlz2HfOHXX1J+FvQpv6KHHJ4J3KGfnbnTjw/7jnpFjFe17kST2htXxOvWo4eT+uhTww+Gbbrc1WuvO4bz1IRyN9URgq4PhV5Vb4cuEtKAT3g/MgL8E/9tRF4jxAC8Xg9gN0fvMEKqwWcE3Yrlp0yfLV9XOG5qIcvJWSioSlBgo8FnQdztRRPWxF+IqIMcjUVzXbmo9MCw3ShFS+8wI4q/65Im0VoGuJs4bef2eMJGM7cs1PDpMQhWjk5BtlRS6r4OnKFVwFLrzsTBjUnm4YzZz9JxUCLn7jyDEM2HNM8Yqk9Ub0Gf+6ZAQvobN1NI4bRG2sYkB3dG34lcGkE4CrIxFye8o9ojIxOjpmBRIPo13UM803OntnolKCVsDIdGEtxO8hNiO/giJTyoatBo5MskypRNzn1weTMc0A8wJeNqau/V83oaqv7wuDicCL7Cy4NRqaH+YxGGV5pCa1tYTQbAAHL4MRPlA+r28FyfSyLOWSK77jhsQcFkJzBvEA4HGA+zCynM86evFYbeXv0ZkTTxTOZi1sNk7c1Vw7iDgKwBiAdi5IOhfJGF2uFtkauKiIflwOnk9Qs=
   on:
     tags: true
     python: 3.6
