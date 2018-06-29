@@ -5,6 +5,17 @@ Library for playing around with si7021 relative humidity and temperature sensor 
 
 ## Usage
 
+```python
+
+RHTEMP = Si7021()
+
+print("Temperature: " + str(round(RHTEMP.temperature, 2)) + u" \u00B0C")
+print("Relative humidity: " + str(round(RHTEMP.relative_humidity, 2)) + " %")
+
+RHTEMP.close()
+
+```
+
 ## Testing
 
 Run unit tests with command:

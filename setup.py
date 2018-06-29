@@ -7,7 +7,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
 	name='pi_si7021',
-	version='0.5.2',
+	version='0.5.3',
 	author='Toni Kangas',
 	description='Library to read si7021 sensor.',
 	long_description=long_description,
