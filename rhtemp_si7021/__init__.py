@@ -1,3 +1,3 @@
-name = "si7021"
+name = "rhtemp_si7021"
 
 from .si7021 import Si7021
