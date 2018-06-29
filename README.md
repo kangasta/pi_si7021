@@ -7,6 +7,8 @@ Library for playing around with si7021 relative humidity and temperature sensor 
 
 ```python
 
+from pi_si7021 import Si7021
+
 RHTEMP = Si7021()
 
 print("Temperature: " + str(round(RHTEMP.temperature, 2)) + u" \u00B0C")
@@ -18,7 +20,7 @@ RHTEMP.close()
 
 ## Testing
 
-Run unit tests with command:
+Run unit tests with commands:
 
 ```bash
 cd pi_si7021
