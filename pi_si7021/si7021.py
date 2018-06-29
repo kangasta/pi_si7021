@@ -25,6 +25,12 @@ class Si7021(object):
 		self.pi = pigpio.pi()
 		self.i2c = self.pi.i2c_open(1,self.__addr)
 
+	def __str__(self):
+		return(
+			"Temperature: " + str(round(self.temperature, 2)) + u" \u00B0C\n"
+			"Relative humidity: " + str(round(self.relative_humidity, 2)) + " %"
+		)
+
 	@property
 	def temperature(self):
 		self.pi.i2c_write_device(self.i2c, self.__cmds["meas_temp_nohold"])
