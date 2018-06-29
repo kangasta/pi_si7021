@@ -1,5 +1,5 @@
 # pi_si7021
-[![Build Status](https://travis-ci.org/kangasta/py-si7021.svg?branch=master)](https://travis-ci.org/kangasta/py-si7021)
+[![Build Status](https://travis-ci.org/kangasta/pi_si7021.svg?branch=master)](https://travis-ci.org/kangasta/pi_si7021)
 
 Library for playing around with si7021 relative humidity and temperature sensor with Raspberry Pi. Based on [pigpio example](http://abyz.me.uk/rpi/pigpio/examples.html#Python_Si7021_py).
 
